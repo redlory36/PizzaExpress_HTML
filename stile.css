@@ -14,7 +14,10 @@ h1 {
     padding: 20px;
     margin: 0;
     font-size: 2.5em;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .Contenitore {
     display: flex;
@@ -27,6 +30,8 @@ h1 {
 
 
 button {
+    font-family:sans-serif ;
+    font-size: px;
     background-color: #457b9d;
     color: white;
     border: none;
@@ -35,16 +40,15 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
 button:hover {
     background-color: #1d3557;
+    scale:1.2;
 }
-#output{
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 #button1 { background-color: #2a9d8f; }   
 #button2 { background-color: #e9c46a; }   
@@ -53,5 +57,38 @@ button:hover {
 
 #button1:hover { background-color: #21867a; }
 #button2:hover { background-color: #d4aa46; }
-#button3:hover { background-color: #db8743; }
+#button3:hover { background-color: #c77b3d; }
 #button4:hover { background-color: #c5543b; }
+
+
+#output {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-left: 6px solid #457b9d;  
+    animation: fadeIn 0.4s ease-in-out;
+}
+#output:hover{
+    scale:1.1;
+}
+#output h2 {
+    color: #1d3557;
+    margin-top: 0;
+}
+#output ul, #output ol {
+    padding-left: 20px;
+}
+#output li {
+    margin-bottom: 8px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
