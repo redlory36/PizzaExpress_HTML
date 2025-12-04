@@ -8,7 +8,7 @@ const output = document.getElementById("output");
 
 
 const apiURL = "http://localhost:5011/api/pizze";
-// Funzione per mostrare i risultati
+
 function showOutput(message, data = null) {
     function convert(value) {
         if (Array.isArray(value)) {
@@ -25,7 +25,7 @@ function showOutput(message, data = null) {
     }
 
     const text = data ? convert(data) : "";
-    output.innerHTML = `<strong>${message}</strong><br>${text}`;
+    output.innerHTML = `<strong>${message}<br></strong>${text}<br>`;
 }
 
 
@@ -40,6 +40,11 @@ btnGet.addEventListener("click", async () => {
         showOutput("Errore GET:", error);
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    btnGet.click();
+});
+
 // PUT
 btnPut.addEventListener("click", async () => {
     const idToModify = prompt("Inserisci l'ID della pizza da modificare:");
